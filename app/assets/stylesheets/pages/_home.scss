@@ -1,1 +1,196 @@
 // Specific CSS for your home-page
+$margin-side: 10rem;
+
+//-----------------------------//
+//         GLOBAL CSS          //
+//-----------------------------//
+
+#about-me-section,
+#hobbies-section,
+#resume,
+#my-services-section {
+  margin: 5rem $margin-side;
+}
+
+h4.title-section {
+  display:table;
+  margin: 0 auto;
+  padding: 1rem 0;
+  font-size: 3rem;
+  font-weight:bold;
+  box-shadow: 0px -1rem 0px -12px rgb(0,0,0);
+}
+
+//-----------------------------//
+//         BANNER CSS          //
+//-----------------------------//
+
+#banner {
+  display:flex;
+  justify-content:left;
+  align-items:flex-start;
+  background-color: $green;
+  padding: 5rem $margin-side;
+  img {
+    box-shadow: 0 10px 20px 5px rgba(0,0,0, 0.2);
+    max-width:30%;
+    border-radius:50%;
+    animation: moovImage 10s infinite ease;
+  }
+}
+
+    #banner--inside {
+      flex-grow: 2;
+      text-align:center;
+      h2 {
+        font-size:5rem;
+        font-weight:bold;
+        margin:3rem 0 1rem 0;
+      }
+      .main-button {
+        margin: 2rem auto;
+        width:30%;
+      }
+    }
+
+    .slash-bar {
+      border-left: 1px solid $black;
+      padding-left: 1.1rem;
+      margin-left:1rem;
+    }
+
+
+//-----------------------------//
+//     ABOUT-SECTION CSS       //
+//-----------------------------//
+
+#about-me-section {
+  text-align:center;
+  p {font-size: 1.3rem;}
+}
+
+#hobbies-section {
+  margin: 8rem $margin-side;
+}
+    #container-card-hobbies {
+      margin: 5rem 0;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+
+    }
+    #container-card-hobbies span {
+      margin: 1rem;
+    }
+
+//-----------------------------//
+//     RESUME-SECTION CSS      //
+//-----------------------------//
+
+#resume {
+  .label {
+    display:table;
+    margin: 2rem auto;
+  }
+}
+
+    .tree-item {
+      width:50%;
+      padding:1rem 2rem;
+      position:relative;
+      &.right {
+        margin-left:auto;
+        transform:translate(-2px, 0);
+        text-align:start;
+        border-left:2px solid $blue;
+        .bubble-tree-item--experience,
+        .bubble-tree-item--education {
+          left:-12px;
+        }
+      }
+      &.left {
+        margin-right:auto;
+        text-align:end;
+        border-right:2px solid $blue;
+        .bubble-tree-item--experience,
+        .bubble-tree-item--education {
+          right:-12px;
+        }
+      }
+    }
+    .bubble-tree-item--experience {
+      position:absolute;
+      top:-2px;
+      width:1.5rem;
+      height:1.5rem;
+      border-radius:50%;
+      background-color:$green;
+    }
+
+    .bubble-tree-item--education {
+      position:absolute;
+      top:0;
+      width:1.5rem;
+      height:1.5rem;
+      border-radius:50%;
+      background-color:$coral;
+    }
+
+    .tree-item--title {
+      text-transform: uppercase;
+      font-size:1.1rem;
+      color:$blue;
+      font-weight:bold;
+    }
+
+    .tree-item--subtitle {
+      color:rgba($gray,0.8);
+      font-weight:lighter;
+      padding-bottom: 0.5rem;
+    }
+
+
+//-----------------------------//
+//     RESUME-SECTION CSS      //
+//-----------------------------//
+
+
+#my-services-section {
+
+}
+
+#my-services-card-container {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  // flex: 0 0 35%;
+}
+
+li.star {
+  display:inline;
+}
+.star svg {
+  width:2rem;
+  height:2rem;
+  fill:$blue;
+}
+.star.empty svg {
+  fill: $coral;
+}
+
+//-----------------------------//
+//          KEYFRAMES          //
+//-----------------------------//
+
+@keyframes moovImage {
+  from {
+    transform: translate(0, 0px)
+  }
+  33% {
+    transform: translate(0, -10px)
+  }
+  66% {
+    transform: translate(0, 10px)
+  }
+  to {transform: translate(0, 0px)}
+}

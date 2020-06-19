@@ -1,0 +1,44 @@
+.label {
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  color:$blue;
+  font-weight:bold;
+}
+
+.label-green {
+  background-color: $green;
+}
+
+.label-coral {
+  margin-top: 5rem !important;
+  background-color: $coral
+}
+
+.icon {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin: 0 auto;
+  width:6rem;
+  height:6rem;
+  border-radius:50%;
+  background-color:$blue;
+  svg {
+    display:block;
+    width:auto;
+    text-align:center;
+  }
+  &.hat {
+    fill: $coral;
+    svg {
+      height:70%;
+    }
+  }
+  &.wallet {
+    fill:$green;
+    svg {
+      height:60%;
+    }
+  }
+}
+
