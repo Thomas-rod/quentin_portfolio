@@ -1,0 +1,5 @@
+meta_product_name: "Quentin Resume"
+meta_title: "Quentin Rodier - Resume"
+meta_description: "Are you looking for a trainee ? Let's chat !"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards

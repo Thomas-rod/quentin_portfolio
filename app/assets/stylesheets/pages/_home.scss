@@ -18,7 +18,7 @@ h4.title-section {
   padding: 1rem 0;
   font-size: 3rem;
   font-weight:bold;
-  box-shadow: 0px -1rem 0px -12px rgb(0,0,0);
+  box-shadow: 0px -1rem 0px -12px $blue;
 }
 
 //-----------------------------//
@@ -76,7 +76,7 @@ h4.title-section {
       margin: 5rem 0;
       display:flex;
       flex-wrap:wrap;
-      justify-content:space-between;
+      justify-content:center;
 
     }
     #container-card-hobbies span {
@@ -90,7 +90,7 @@ h4.title-section {
 #resume {
   .label {
     display:table;
-    margin: 2rem auto;
+    margin: 3rem auto;
   }
 }
 
@@ -105,7 +105,7 @@ h4.title-section {
         border-left:2px solid $blue;
         .bubble-tree-item--experience,
         .bubble-tree-item--education {
-          left:-12px;
+          left:-12.7px;
         }
       }
       &.left {
@@ -114,7 +114,7 @@ h4.title-section {
         border-right:2px solid $blue;
         .bubble-tree-item--experience,
         .bubble-tree-item--education {
-          right:-12px;
+          right:-12.7px;
         }
       }
     }
@@ -151,7 +151,7 @@ h4.title-section {
 
 
 //-----------------------------//
-//     RESUME-SECTION CSS      //
+//     SERVICE-SECTION CSS     //
 //-----------------------------//
 
 
@@ -178,6 +178,38 @@ li.star {
   fill: $coral;
 }
 
+
+//-----------------------------//
+//     FOOTER-SECTION CSS      //
+//-----------------------------//
+
+footer {
+  display:flex;
+  justify-content:space-between;
+  align-items:start;
+  padding: 2rem $margin-side;
+  background-color: $blue;
+  color:$white;
+  p {
+    margin: 0.5rem 0;
+  }
+}
+
+#made-by,
+footer li {
+  display:inline;
+  a {
+    color:$white;
+    &:hover {
+      color:$white;
+    }
+  }
+}
+
+#link-site-thomas {
+  text-decoration:underline;
+}
+
 //-----------------------------//
 //          KEYFRAMES          //
 //-----------------------------//
@@ -194,3 +226,262 @@ li.star {
   }
   to {transform: translate(0, 0px)}
 }
+
+
+//-----------------------------//
+//        RESPONSIVENESS       //
+//-----------------------------//
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+
+
+  //-----------------------------//
+  //         GLOBAL CSS          //
+  //-----------------------------//
+
+
+  html {
+    font-size:55%;
+  }
+
+  #about-me-section,
+  #hobbies-section,
+  #resume,
+  #my-services-section {
+    margin: 5rem 2rem;
+  }
+
+  h4.title-section {
+    box-shadow: 0px -1.8rem 0px -12px $blue;
+  }
+
+  //-----------------------------//
+  //         BANNER CSS          //
+  //-----------------------------//
+
+  #banner {
+    display:block;
+    padding: 5rem 2rem;
+    img {
+      display:block;
+      margin: 0 auto;
+      max-width:60%;
+    }
+  }
+  #banner--inside {
+    .main-button {
+      width:55%;
+    }
+  }
+
+  //-----------------------------//
+  //      ABOUT ME SECTION       //
+  //-----------------------------//
+
+  #about-me-section {
+    p {font-size:1.5rem;}
+  }
+
+  .card-hobbies p {
+    font-size: 1rem
+  }
+
+  //-----------------------------//
+  //       RESUME SECTION        //
+  //-----------------------------//
+
+  .tree-item {
+    width:90%;
+    padding: 1rem 2rem 3rem 2rem;
+    &.right {
+      margin: 0 auto;
+      border-left:2px solid $blue;
+      &:not(.last){box-shadow: -5px 7px 0px -5px $blue;}
+      .bubble-tree-item--experience,
+      .bubble-tree-item--education {
+        left:-9.7px;
+      }
+    }
+    &.left {
+      margin-right:auto;
+      text-align:end;
+      border-right:2px solid $blue;
+      &:not(.last){box-shadow: 5px 7px 0px -5px $blue;}
+      .bubble-tree-item--experience,
+      .bubble-tree-item--education {
+        right:-9.7px;
+      }
+    }
+  }
+
+  .bubble-tree-item--experience,
+  .bubble-tree-item--education {
+    width:2rem;
+    height:2rem;
+    top: -5px;
+  }
+
+  .tree-item--title {
+    font-size:1.9rem;
+  }
+
+  .tree-item--subtitle {
+    font-size:1.2rem;
+  }
+  .tree-item--body {
+    font-size:1.2rem;
+  }
+
+  //-----------------------------//
+  //       RESUME SECTION        //
+  //-----------------------------//
+
+  .card-my-services {
+    min-width:90%;
+    margin: 1rem auto;
+  }
+
+  //-----------------------------//
+  //       RESUME SECTION        //
+  //-----------------------------//
+
+  footer {
+    display:block;
+    padding: 2rem;
+    text-align:center;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) and (min-width: 400px){
+
+  html {
+    font-size:55%;
+  }
+
+  #about-me-section,
+  #hobbies-section,
+  #resume,
+  #my-services-section {
+    margin: 5rem 2rem;
+  }
+
+  h4.title-section {
+    box-shadow: 0px -1.8rem 0px -12px $blue;
+  }
+
+  //-----------------------------//
+  //         BANNER CSS          //
+  //-----------------------------//
+
+  #banner {
+    display:block;
+    padding: 5rem 2rem;
+    img {
+      display:block;
+      margin: 0 auto;
+      max-width:60%;
+    }
+  }
+  #banner--inside {
+    .main-button {
+      width:55%;
+    }
+  }
+
+  //-----------------------------//
+  //      ABOUT ME SECTION       //
+  //-----------------------------//
+
+  #about-me-section {
+    p {font-size:1.5rem;}
+  }
+
+  .card-hobbies p {
+    font-size: 1rem
+  }
+
+  //-----------------------------//
+  //       RESUME SECTION        //
+  //-----------------------------//
+
+  .tree-item {
+    width:90%;
+    padding: 1rem 2rem 3rem 2rem;
+    &.right {
+      margin: 0 auto;
+      border-left:2px solid $blue;
+      &:not(.last){box-shadow: -5px 7px 0px -5px $blue;}
+      .bubble-tree-item--experience,
+      .bubble-tree-item--education {
+        left:-9.7px;
+      }
+    }
+    &.left {
+      margin-right:auto;
+      text-align:end;
+      border-right:2px solid $blue;
+      &:not(.last){box-shadow: 5px 7px 0px -5px $blue;}
+      .bubble-tree-item--experience,
+      .bubble-tree-item--education {
+        right:-9.7px;
+      }
+    }
+  }
+
+  .bubble-tree-item--experience,
+  .bubble-tree-item--education {
+    width:2rem;
+    height:2rem;
+    top: -5px;
+  }
+
+  .tree-item--title {
+    font-size:1.9rem;
+  }
+
+  .tree-item--subtitle {
+    font-size:1.4rem;
+  }
+  .tree-item--body {
+    font-size:1.2rem;
+  }
+
+  //-----------------------------//
+  //       RESUME SECTION        //
+  //-----------------------------//
+
+  .card-my-services {
+    min-width:90%;
+    margin: 1rem auto;
+  }
+
+  //-----------------------------//
+  //       RESUME SECTION        //
+  //-----------------------------//
+
+  footer {
+    display:block;
+    padding: 2rem;
+    text-align:center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and  (max-width: 1100px) and (min-width: 992px){
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1100px) {
+
+}
+

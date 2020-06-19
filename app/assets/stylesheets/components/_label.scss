@@ -10,8 +10,11 @@
 }
 
 .label-coral {
-  margin-top: 5rem !important;
-  background-color: $coral
+  background-color: $coral !important;
+  svg {
+    fill:$blue;
+    height:60%;
+  }
 }
 
 .icon {
@@ -42,3 +45,13 @@
   }
 }
 
+
+.icon-footer {
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+
+
+.font-red {
+  color:red;
+}
